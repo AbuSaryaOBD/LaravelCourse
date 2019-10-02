@@ -81,7 +81,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Abo Sarya
+                    Abu Sarya
                 </div>
 
                 <div class="links">
