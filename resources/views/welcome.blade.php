@@ -81,7 +81,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Abu Sarya
+                    Welcom
                 </div>
 
                 <div class="links">
