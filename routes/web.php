@@ -19,9 +19,31 @@
 
 // Route::view('about','about');
 
-Route::get('/insert',function(){
-    //DB::insert('insert into posts');
+
+
+// Route::get('/insert',function(){
+//     DB::insert('INSERT into posts(title,content) values(?,?)',['PHP with Laravel','PHP Laravel deserve to study']);
+    
+// });
+// Route::get('/read',function(){
+//     $results= DB::select('SELECT * from posts where id=?',[1]);
+//     return $results;
+
+//     foreach ($results as $post) {
+//         return $post->title;
+//     }
+
+// });
+// Route::get('/update',function(){
+//     $affected=DB::update('UPDATE posts set title="Update Title" where id=?',[1]);
+//     return $affected;
+// });
+Route::get('delete',function(){
+    $affected=DB::delete('DELETE from posts where id=?',[1]);
+    return $affected;
 });
+
+
 
 
 // Route::view('contact-us','contact')->name('con');
