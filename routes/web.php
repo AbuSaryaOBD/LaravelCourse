@@ -1,5 +1,6 @@
 <?php
 
+use App\Country;
 use App\Post;
 use App\User;
 
@@ -138,36 +139,63 @@ use App\User;
 // });
 
 
+
+
 //*******************************************//
 //-------------------------------------------//
 //______________ ReleationShip ______________//
 
 
 /////////////// One To One : 
-Route::get('/user/{id}/post',function($id){
-    return User::find($id)->post;
-});
+// Route::get('/user/{id}/post',function($id){
+//     return User::find($id)->post;
+// });
 
-Route::get('/post/{id}/user',function($id){
-    return Post::find($id)->user;
-});
+// Route::get('/post/{id}/user',function($id){
+//     return Post::find($id)->user;
+// });
 
 /////////////// One To Many :
-Route::get('/posts',function(){
-    $user = User::find(1);
-    foreach ($user->posts as $post) {
-        echo $post->title . '</br>';
-    }
-});
+// Route::get('/posts',function(){
+//     $user = User::find(1);
+//     foreach ($user->posts as $post) {
+//         echo $post->title . '</br>';
+//     }
+// });
 
 /////////////// Many To Many :
-Route::get('/user/{id}/role',function($id){
-    $user = User::find($id)->roles()->orderBy('id','desc')->get();
-    return $user;
-    // foreach ($user->roles as $role) {
-    //     return $role->name;
-    // }
-});
+// Route::get('/user/{id}/role',function($id){
+//     $user = User::find($id)->roles()->orderBy('id','desc')->get();
+//     return $user;
+//     // foreach ($user->roles as $role) {
+//     //     return $role->name;
+//     // }
+// });
+
+
+/////////////// Accessing pivot table :
+// Route::get('/user/pivot',function(){
+//     $user = User::find(1);
+
+//     foreach ($user->roles as $role) {
+//         echo $role->pivot->created_at;
+//     }
+// });
+
+
+// Route::get('/user/country',function(){
+//     $country = Country::find(1);
+//     echo '<ul>';
+//     foreach ($country->posts as $post) {
+//         echo '<li>' . $post->title . '</li>';
+//     }
+//     echo '</ul>';
+// });
+
+
+/////////////// Accessing pivot table :
+
+
 
 
 
