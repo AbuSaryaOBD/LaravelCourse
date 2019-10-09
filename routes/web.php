@@ -4,6 +4,7 @@ use App\Country;
 use App\Photo;
 use App\Post;
 use App\User;
+use App\Tag;
 
 /*
 |--------------------------------------------------------------------------
@@ -200,9 +201,19 @@ use App\User;
 //     return $photo->imageable;
 // });
 
+// Route::get('/post/tag',function(){
+//     $post = Post::find(1);
+//     foreach ($post->tags as $tag) {
+//         echo $tag->name;
+//     }
+// });
 
-
-
+Route::get('/tag/post',function(){
+    $tag = Tag::find(2);
+    foreach ($tag->posts as $post) {
+        echo $post->title;
+    }
+});
 
 
 //______________ ReleationShip ______________//

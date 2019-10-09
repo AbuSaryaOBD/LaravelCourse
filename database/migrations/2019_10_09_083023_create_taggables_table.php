@@ -17,7 +17,7 @@ class CreateTaggablesTable extends Migration
             // $table->bigIncrements('id');
             $table->integer('tag_id');
             $table->integer('taggable_id');
-            $table->integer('taggable_type');
+            $table->string('taggable_type');
         });
     }
 
