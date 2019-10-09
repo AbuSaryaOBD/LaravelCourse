@@ -1,6 +1,7 @@
 <?php
 
 use App\Country;
+use App\Photo;
 use App\Post;
 use App\User;
 
@@ -193,7 +194,12 @@ use App\User;
 // });
 
 
-/////////////// Accessing pivot table :
+/////////////// Ploymorphic Realtions :
+// Route::get('/photo/{id}/owner',function($id){
+//     $photo = Photo::find($id);
+//     return $photo->imageable;
+// });
+
 
 
 
