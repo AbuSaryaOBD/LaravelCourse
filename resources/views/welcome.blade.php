@@ -81,7 +81,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Welcom
+                    Welcome Welocme </br> Alright
                 </div>
 
                 <div class="links">
