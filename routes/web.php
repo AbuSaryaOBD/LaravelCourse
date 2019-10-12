@@ -17,7 +17,7 @@ use App\Tag;
 |
 */
 
-// Route::view('/','welcome');
+ Route::view('/','welcome');
 
 // Route::get('/contact','PostController@contact');
 
