@@ -50,8 +50,8 @@ class PostController extends Controller
         //     'content' => 'required'
         // ]);
 
-        Post::create($request->all());
-        return redirect('/posts');
+        // Post::create($request->all());
+        // return redirect('/posts');
 
 
         
@@ -61,6 +61,26 @@ class PostController extends Controller
         // $post = new Post;
         // $post->title=$request->title;
         // $post->save();
+
+
+
+        // $file = $request->file('file');
+        // echo '<br>';
+        // echo $file->getClientOriginalName();
+        // echo '<br>';
+        // echo $file->getClientSize();
+        //
+        $input = $request->all();
+        if ($file = $request->file('file'))
+        {
+            
+            $name = $file->getClientOriginalName();
+            $file->move('images',$name);
+            $input['path'] = $name;
+        }
+        // dd($input);
+        Post::create($input);
+        
     }
 
     /**
