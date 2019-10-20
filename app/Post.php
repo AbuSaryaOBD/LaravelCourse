@@ -33,7 +33,7 @@ class Post extends Model
 
     public static function scopeLatest($query)
     {
-        return $query->orderBy('id','asc');
+        return $query->orderBy('id','desc');
     }
 
     public function getPathAttribute($value)
